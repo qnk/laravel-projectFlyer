@@ -26,6 +26,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies($gate);
 
-        //
+        $gate->define('show-post', function($user, $flyer){
+            return $user->id == $flyer->user_id;
+        });
     }
 }
