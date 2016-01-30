@@ -77,8 +77,6 @@ class FlyersController extends Controller
 
         $file = $request->file('file');
 
-        dd($file);
-
         $name = time() . $file->getClienteOriginalName();
 
         $file->move(URL::to('/') . '/images/photos',$name);
