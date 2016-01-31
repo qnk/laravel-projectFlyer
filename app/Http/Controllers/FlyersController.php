@@ -71,9 +71,11 @@ class FlyersController extends Controller
 
         //$this->authorize('show-post', $post);
 
+        /*
         if(Gate::denies('show-post',$post)){
             abort(403, 'Not allowed');
         }
+        */
 
         $file = $request->file('file');
 

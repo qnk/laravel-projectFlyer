@@ -8,9 +8,9 @@
 
 	<div class="description">{!! nl2br($flyer->description) !!}</div>
 
-	@can('show-post',$flyer)
+	@can('upload-images',$flyer)
 		<form action="{{ URL::to('/') }}/{{ $flyer->zip }}/{{ $flyer->street }}/photos" method="POST" class="dropzone" enctype="multipart/form-data">
 			{{ csrf_field() }}
 		</form>
-		@endcan
+	@endcan 
 @stop
