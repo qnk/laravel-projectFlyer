@@ -1,16 +1,5 @@
 <?php
 
-/*
-Route::get('/', 'PagesController@home');
-Route::get('login', 'PagesController@login');
-*/
-
-/*
-Route::group(['middleware' => ['web']], function(){
-	Route::resource('flyers','FlyersController');	
-});
-*/
-
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
