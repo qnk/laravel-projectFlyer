@@ -5,10 +5,8 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-        <script src="{{ URL::to('/') }}/js/libs/sweetalert-dev.js"></script>
         <link rel="stylesheet" type="text/css" href="{{ URL::to('/') }}/css/libs/sweetalert.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.css">
-
     </head>
     <style>
         .content{
@@ -62,8 +60,8 @@
 
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                                    </ul>
-                                </li>
+                                    </ul
+>                                </li>
                             @endif
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -74,11 +72,11 @@
             </div>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.js"></script>
-
         @include('flash')
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.js"></script>
+        <script src="{{ URL::to('/') }}/js/libs/sweetalert-dev.js"></script>
     </body>
 </html>
