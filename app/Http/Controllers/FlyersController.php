@@ -67,15 +67,9 @@ class FlyersController extends Controller
 
     public function addPhoto($zip, $street,Request $request)
     {
-        $post = Post::findOrFail($id);
-
-        //$this->authorize('show-post', $post);
-
-        /*
-        if(Gate::denies('show-post',$post)){
+        if(Gate::denies('upload-images',$post)){
             abort(403, 'Not allowed');
         }
-        */
 
         $file = $request->file('file');
 
