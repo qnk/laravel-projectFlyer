@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 use App\Http\Requests\FlyerRequest;
 use App\Http\Controllers\Controller;
 use App\Flyer;
 use Gate;
+use Response;
 
 class FlyersController extends Controller
 {
@@ -65,19 +67,17 @@ class FlyersController extends Controller
         return view('flyers.show',compact('flyer'));
     }
 
-    public function addPhoto($zip, $street,Request $request)
+    public function addPhoto(Request $request,$zip,$street)
     {
-        if(Gate::denies('upload-images',$post)){
-            abort(403, 'Not allowed');
-        }
+        $flyer = Flyer::locatedAt($zip,$street)->firstOrFail();
 
         $file = $request->file('file');
 
-        $name = time() . $file->getClienteOriginalName();
+        $name = time() . $file->getClientOriginalName();
 
-        $file->move(URL::to('/') . '/images/photos',$name);
+        $file->move('flyers/photos',$name);
 
-        return 'Done';
+        $flyer->photos()->create(['path' => "/flyers/photos/{$name}"]);
     }
 
     /**
