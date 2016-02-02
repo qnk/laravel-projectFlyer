@@ -54,6 +54,17 @@ $gate->define('upload-images', function($user, $flyer){
 });
 ```
 
+##### Middlewares
+
+Middlewares are used for authorization:
+
+```
+public function __construct()
+{
+    $this->middleware('auth',['except' => 'show']);
+}
+```
+
 ACL also used on Blade:
 
 ```
