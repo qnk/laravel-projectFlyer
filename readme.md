@@ -4,9 +4,13 @@ Focused on my improvement as a developer, the Project Flyer follows many of the 
 
 **Important note!** Site has being updated to GitHub to show how I'm working under a developement environment, not a production one.
 
-## Technology
+## Technologies
 
 Developed with [Laravel 5.2](http://laravel.com/docs).
+
+Also used:
+- Bootstrap 3
+- jQuery
 
 ## Dev. status
 
