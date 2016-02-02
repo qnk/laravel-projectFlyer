@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Requests\FlyerRequest;
 use App\Http\Controllers\Controller;
 use App\Flyer;
-use Gate;
 use Response;
 
 class FlyersController extends Controller
@@ -65,19 +64,6 @@ class FlyersController extends Controller
         $flyer = Flyer::locatedAt($zip,$street)->first();
 
         return view('flyers.show',compact('flyer'));
-    }
-
-    public function addPhoto(Request $request,$zip,$street)
-    {
-        $flyer = Flyer::locatedAt($zip,$street)->firstOrFail();
-
-        $file = $request->file('file');
-
-        $name = time() . $file->getClientOriginalName();
-
-        $file->move('flyers/photos',$name);
-
-        $flyer->photos()->create(['path' => "/flyers/photos/{$name}"]);
     }
 
     /**

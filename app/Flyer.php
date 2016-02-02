@@ -20,7 +20,7 @@ class Flyer extends Model
 	{
 		$street = str_replace('-', ' ', $street);
 
-		return $query->where(compact('zip','street'));
+		return $query->where(compact('zip','street'))->firstOrFail();
 	}
 
 	//mutator --> getXXXXAttribute
