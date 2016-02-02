@@ -16,7 +16,7 @@ Also used:
 
 Currently working on this project, so stay tunned for more updates.
 
-## Design patters and good practices applied
+## Design patterns and good practices applied
 
 Some of good practices and techniques applied are:
 
