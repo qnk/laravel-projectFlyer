@@ -38,6 +38,12 @@ public function getPriceAttribute($price)
 }
 ```
 
+##### Named routes
+
+```
+action="{{ route('store_photo_path',['zip' => $flyer->zip, 'street' => $flyer->street]) }}"
+```
+
 ## More about me
 
 You can find more info about me at [Linkedin](http://es.linkedin.com/in/joseantoniocuenca).
