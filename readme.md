@@ -54,6 +54,14 @@ $gate->define('upload-images', function($user, $flyer){
 });
 ```
 
+ACL also used on Blade:
+
+```
+@can('upload-images',$flyer)
+    // ...
+@endcan
+```
+
 ##### Middlewares
 
 Middlewares are used for authorization:
@@ -65,12 +73,20 @@ public function __construct()
 }
 ```
 
-ACL also used on Blade:
+##### REST api
+
+Simply routing on a RESTful way but also taking care about SEO good practices
 
 ```
-@can('upload-images',$flyer)
-    // ...
-@endcan
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/', 'PagesController@home');
+	Route::resource('flyers','FlyersController');	
+
+	Route::get('{zip}/{street}','FlyersController@show');
+	Route::post('{zip}/{street}/photos',['as' => 'store_photo_path','uses' => 'PhotosController@store']);
+});
 ```
 
 ## More about me
