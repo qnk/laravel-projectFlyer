@@ -1,4 +1,4 @@
-## Project flyer
+## Project Flyer
 
 Focused on my improvement as a developer, the Project Flyer follows many of the techniques tought by Jeffrey Way on his site Laracasts.
 
