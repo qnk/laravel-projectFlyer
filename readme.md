@@ -20,7 +20,7 @@ Currently working on this project, so stay tunned for more updates.
 
 Some of good practices and techniques applied are:
 
-1. ##### Query scopes
+##### Query scopes
 
 ```
 public function scopeLocatedAt($query,$zip, $street)
@@ -29,7 +29,7 @@ public function scopeLocatedAt($query,$zip, $street)
 }
 ```
 
-2. ##### Mutators
+##### Mutators
 
 ```
 public function getPriceAttribute($price)
@@ -38,13 +38,13 @@ public function getPriceAttribute($price)
 }
 ```
 
-3. ##### Named routes
+##### Named routes
 
 ```
 action="{{ route('store_photo_path',['zip' => $flyer->zip, 'street' => $flyer->street]) }}"
 ```
 
-4. ##### ACL
+##### ACL
 
 Laravel's Gates allows to create ACL:
 
