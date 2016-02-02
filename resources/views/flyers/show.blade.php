@@ -17,7 +17,10 @@
 			@endforeach
 
 			@can('upload-images',$flyer)
-				<form action="{{ URL::to('/') }}/{{ $flyer->zip }}/{{ $flyer->street }}/photos" class="dropzone">
+				<form
+					action="{{ route('store_photo_path',['zip' => $flyer->zip, 'street' => $flyer->street]) }}"
+					class="dropzone"
+				>
 					{{ csrf_field() }}
 				</form>
 			@endcan 
