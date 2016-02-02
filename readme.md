@@ -73,7 +73,7 @@ public function __construct()
 }
 ```
 
-##### REST api
+##### RESTful api
 
 Simply routing on a RESTful way but also taking care about SEO good practices
 
@@ -88,6 +88,10 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('{zip}/{street}/photos',['as' => 'store_photo_path','uses' => 'PhotosController@store']);
 });
 ```
+
+##### PSR2
+
+Code styled following many of the PSR2 recommendations. Stil pending some comments about the ins and outs for each method.
 
 ## More about me
 
