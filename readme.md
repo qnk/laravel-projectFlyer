@@ -2,7 +2,7 @@
 
 Focused on my improvement as a developer, the Project Flyer follows many of the techniques tought by Jeffrey Way on his site Laracasts.
 
-Important note! Site has being updated to GitHub to show how I'm working under a developement environement, not a production one.
+**Important note!** Site has being updated to GitHub to show how I'm working under a developement environement, not a production one.
 
 ## Technology
 
