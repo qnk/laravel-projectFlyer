@@ -95,8 +95,15 @@ class FlyersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete()
     {
-        //
+        dd(Flyer::all());
+
+        Flyer::delete([
+            $this->path,
+            $this->thumbnail_path
+        ]);
+
+        parent::delete();
     }
 }

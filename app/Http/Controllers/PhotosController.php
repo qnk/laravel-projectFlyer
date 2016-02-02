@@ -25,4 +25,10 @@ class PhotosController extends Controller
         //$photo = Photo::fromFile($request->file('file'))->upload();
         $flyer->photos()->create(['path' => "/flyers/photos/{$name}"]);
     }
+
+    public function destroy($id)
+    {
+        $photo = Photo::findOrFail($id)->delete();
+    }
+
 }

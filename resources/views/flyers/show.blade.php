@@ -12,8 +12,19 @@
 		</div>
 
 		<div class="col-md-9">
-			@foreach ($flyer->photos as $photo)
-				<img src="{{URL::to('/')}}/{{ $photo->path }}" alt="alt">
+			@foreach ($flyer->photos->chunk(4) as $set)
+				<div class="row">
+				@foreach ($set as $photo)
+					<div class="col-md-3 gallery_image">	
+						<form method="POST" action="{{URL::to('/')}}/photos/{{ $photo->id }}">
+							{!! csrf_field() !!}
+							<input type="hidden" name="_method" value="DELETE">
+							<button type="submit">Delte</button>
+						</form> 
+						<img src="{{URL::to('/')}}/{{ $photo->path }}" alt="alt">
+					</div>
+				@endforeach
+				</div>
 			@endforeach
 
 			@can('upload-images',$flyer)
