@@ -12,4 +12,4 @@ Currently working on this project, so stay tunned for more updates.
 
 ## More about me
 
-You can find more info about me at [Linkedin](es.linkedin.com/in/joseantoniocuenca).
+You can find more info about me at [Linkedin](http://es.linkedin.com/in/joseantoniocuenca).
