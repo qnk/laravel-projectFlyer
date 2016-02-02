@@ -16,6 +16,28 @@ Also used:
 
 Currently working on this project, so stay tunned for more updates.
 
+## Design patters and good practices applied
+
+Some of good practices and techniques applied are:
+
+##### Query scopes
+
+```
+public function scopeLocatedAt($query,$zip, $street)
+{
+    return $query->where(compact('zip','street'))->firstOrFail();
+}
+```
+
+##### Mutators
+
+```
+public function getPriceAttribute($price)
+{
+    return number_format($price,2,',','.') . '€';
+}
+```
+
 ## More about me
 
 You can find more info about me at [Linkedin](http://es.linkedin.com/in/joseantoniocuenca).
